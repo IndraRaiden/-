@@ -102,16 +102,16 @@ const spinWheel = () => {
   // Generate a random number of rotations (between 5 and 10 full rotations)
   const rotations = 5 + Math.random() * 5;
   
-  // Calculate the position for number 50
-  // Find the index of number 50 in the numbers array
-  const targetIndex = numbers.value.findIndex(num => num === '50');
+  // Calculate the position for number 97
+  // Find the index of number 97 in the numbers array
+  const targetIndex = numbers.value.findIndex(num => num === '97');
   
-  // Calculate the angle needed to land on 50
+  // Calculate the angle needed to land on 97
   // We need to calculate the opposite position because the result is determined
   // by the number at the top of the wheel (opposite to the pointer)
   const oppositeIndex = (targetIndex + 50) % 100; // 50 positions away (180 degrees)
   
-  // Calculate the final rotation to make it land on 50
+  // Calculate the final rotation to make it land on 97
   // We add a small random offset to make it look more natural
   const randomOffset = (Math.random() * 0.5) - 0.25; // Small random offset between -0.25 and 0.25 degrees
   const finalRotation = rotation.value + (rotations * 360) + (oppositeIndex * 3.6) + randomOffset;
@@ -136,8 +136,8 @@ const spinWheel = () => {
       rotation.value = finalRotation % 360;
       spinning.value = false;
       
-      // Force the result to be 50
-      result.value = '50';
+      // Force the result to be 97
+      result.value = '97';
       
       // Play win sound
       if (winSound) {
@@ -306,7 +306,7 @@ const spinWheel = () => {
   height: 60px;
   border-radius: 50%;
   background: radial-gradient(circle, #222, #111);
-  border: 2px solid #gold;
+  border: 2px solid var(--gold-color);
 }
 
 .pointer-container {
