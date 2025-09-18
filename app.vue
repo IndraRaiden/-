@@ -1,5 +1,11 @@
 <template>
   <div class="main-container">
+    <!-- First Prize Roulette Component -->
+    <RuletteV2 />
+    
+    <div class="divider"></div>
+    
+    <!-- Second Prize Roulette (Main) -->
     <div class="roulette-container">
       <div class="game-header">
         <h1>Segundo <span>Premio</span></h1>
@@ -57,12 +63,7 @@
     
     <div class="divider"></div>
     
-    <!-- Second Roulette Component -->
-    <RuletteV2 />
-    
-    <div class="divider"></div>
-    
-    <!-- Third Roulette Component -->
+    <!-- Third Prize Roulette Component -->
     <RuletteV3 />
   </div>
 </template>
